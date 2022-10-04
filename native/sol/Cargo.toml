@@ -1,0 +1,19 @@
+[package]
+name = "sol"
+version = "0.1.0"
+authors = ["HansiHE <hansihe@hansihe.com>"]
+edition = "2018"
+
+[lib]
+name = "sol"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.25.0"
+bufstream = "0.1.4"
+borsh = "0.9.3"
+anyhow = "1.0.65"
+solana-client = "1.14.3"
+solana-sdk = "1.14.3"
+rust-base58 = "0.0.4"
