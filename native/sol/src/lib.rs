@@ -83,7 +83,8 @@ fn send_initialize_tx() -> String {
     let payee = Keypair::new();
     let payer = Keypair::new();
     
-    let payer_signature = client.request_airdrop(&payer.pubkey(), 2000000000).unwrap();
+    let payer_signature = client.request_airdrop(&payer.pubkey(), 1000000000).unwrap();
+    let payee_signature = client.request_airdrop(&payee.pubkey(), 1000000000).unwrap();
     // Wait 10 seconds for airdrop confirmation
     thread::sleep(Duration::from_millis(15000));
 
@@ -104,7 +105,7 @@ fn send_initialize_tx() -> String {
     //     signature: signature,
     // });
 
-    "You can view your transaction on the Solana Explorer at:\nhttps://explorer.solana.com/tx/#{signature}?cluster=devnet".to_string()
+    format!("You can view your transaction on the Solana Explorer at: https://explorer.solana.com/tx/{}?cluster=devnet", signature).to_string()
 }
 
 rustler::init!("Elixir.NifSol.Native", [add, send_initialize_tx], load = load);
