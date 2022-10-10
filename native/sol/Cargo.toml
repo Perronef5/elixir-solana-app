@@ -1,7 +1,7 @@
 [package]
 name = "sol"
 version = "0.1.0"
-authors = ["HansiHE <hansihe@hansihe.com>"]
+authors = ["Peroni <peronif5@gmail.com>"]
 edition = "2018"
 
 [lib]
@@ -14,6 +14,8 @@ rustler = "0.25.0"
 bufstream = "0.1.4"
 borsh = "0.9.3"
 anyhow = "1.0.65"
-solana-client = "1.14.3"
-solana-sdk = "1.14.3"
 rust-base58 = "0.0.4"
+anchor-lang = "0.24.2"
+mpl-candy-machine = "4.4.1"
+anchor-client = "^0.24.2"
+
